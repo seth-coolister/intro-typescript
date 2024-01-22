@@ -1,18 +1,8 @@
-// typescript data types
-/* alt shift a to make a block comment 
-boolean
-number
-string
-array
-tuple
-enum
-any
-void
-null and undefined
-never
-object
-*/
+import { basicTypesExample } from "./basic-types";
 
-// boolean
-let isDone: boolean = false;
-console.log(isDone);
+document.querySelector("#basicTypesButton").addEventListener("click", () => { 
+    const basicTypes = basicTypesExample();
+    document.querySelector("#basicTypesTitle").innerHTML = basicTypes.title;
+    document.querySelector("#basicTypesExplanation").innerHTML = basicTypes.explanation;
+    document.querySelector("basicTypesCode").innerHTML = basicTypes.code;
+})
