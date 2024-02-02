@@ -50,6 +50,36 @@ export function arrayTypesExample(){
     }
 }
 
+export function specialTypesExample() {
+  return {
+    title: "Special Types",
+    explanation: "TypeScript has a few data types that are atypical, including any, void, null, undefined, and never",
+    code: `
+    // any type
+    let notSure: any = myCar;
+    // type any can be assigned any value
+    
+    // void type
+    function logMessage(message: string): void {
+      console.log(message);
+    }
+    // void is used on fuctions that return nothing
+    
+    // null and undefined
+    let u: undefined = undefined; // undefined is a JS primitive value and TS has a type named undefined that corresponds to the JS value
+    
+    let n: null = null; // same with undefined
+    
+    // never type
+    function error(message: string): never {
+      throw new Error(message);
+    }
+    // never is a data type for values that never occur
+    // ex: a function that always throws an error will return a 'never'
+    `
+  }
+}
+
 export function functionTypesExample() {
     return {
       title: "Function Types",
@@ -76,3 +106,25 @@ const myCar = {
     year: "2007",
     color: Color.Red
 }
+
+// any type
+let notSure: any = myCar;
+// type any can be assigned any value
+
+// void type
+function logMessage(message: string): void {
+  console.log(message);
+}
+// void is used on fuctions that return nothing
+
+// null and undefined
+let u: undefined = undefined; // undefined is a JS primitive value and TS has a type named undefined that corresponds to the JS value
+
+let n: null = null; // same with undefined
+
+// never type
+function error(message: string): never {
+  throw new Error(message);
+}
+// never is a data type for values that never occur
+// ex: a function that always throws an error will return a 'never'

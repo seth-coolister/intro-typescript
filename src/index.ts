@@ -1,4 +1,4 @@
-import { basicTypesExample, arrayTypesExample } from "./basic-types";
+import { basicTypesExample, arrayTypesExample, specialTypesExample } from "./basic-types";
 
 /* document.querySelector("#basicTypesButton").addEventListener("click", () => {
     const basicTypes = basicTypesExample();
@@ -18,6 +18,7 @@ document.querySelector("#arrayTypesButton").addEventListener("click", () => {
 
 document.querySelector('#basicTypesButton').addEventListener('click', () => loadExample("basic"))
 document.querySelector('#arrayTypesButton').addEventListener('click', () => loadExample("array"))
+document.querySelector('#specialTypesButton').addEventListener('click', () => loadExample("special"))
 
 const cardTitle = document.querySelector("#cardTitle");
 const cardExplanation = document.querySelector('#cardExplanation');
@@ -32,6 +33,9 @@ function loadExample(exampleType: string){
             break;
         case "array":
             chosenExampleType = arrayTypesExample();
+            break;
+        case "special":
+            chosenExampleType = specialTypesExample();
             break;
         default:
             chosenExampleType = basicTypesExample();
