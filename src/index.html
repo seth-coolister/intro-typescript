@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,18 +16,19 @@
     <main class="flex h-full">
       <nav class="bg-primary-content min-w-36 p-2">
         <ul class="flex flex-col">
-          <li><button class="btn mx-2" id="basicTypesButton">Basic Types</button></li>
-          <li><button class="btn m-2">About Me</button></li>
-          <li><button class="btn mx-2">Contact Me</button></li>
+          <li><button class="btn btn-sm mx-2 w-32" id="basicTypesButton">Basic Types</button></li>
+          <li><button class="btn btn-sm m-2 w-32" id="arrayTypesButton">Array Types</button></li>
+          <li><button class="btn btn-sm mx-2 w-32" id="specialTypesButton">Special Types</button></li>
         </ul>
       </nav>
-      <div>
-        <h2 class="text-2xl bg-slate-500 m-2 p-4 text-center">
-          This is my TypeScript site!
-        </h2>
-        <p id="basicTypesTitle"></p>
-        <p id="basicTypesExplanation"></p>
-        <p id="basicTypesCode"></p>
+      <div class="p-2">
+        <h3 id="cardTitle"></h3>
+        <p id="cardExplanation"></p>
+        <div id="cardCode" class="bg-primary-content rounded-lg">
+          <pre>
+            <code id="codeDiv" class="text-wrap"></code>
+          </pre>
+        </div>
       </div>
     </main>
     <footer class="bg-primary-content fixed bottom-0 w-full p-2 text-center">
