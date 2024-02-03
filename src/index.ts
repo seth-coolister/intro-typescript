@@ -1,4 +1,8 @@
 import { basicTypesExample, arrayTypesExample, specialTypesExample } from "./basic-types";
+import hljs from "highlight.js/lib/core";
+import typescript from "highlight.js/lib/languages/typescript";
+
+hljs.registerLanguage("typescript", typescript);
 
 /* document.querySelector("#basicTypesButton").addEventListener("click", () => {
     const basicTypes = basicTypesExample();
@@ -43,6 +47,8 @@ function loadExample(exampleType: string){
 
     cardTitle.textContent = chosenExampleType.title;
     cardExplanation.textContent = chosenExampleType.explanation;
-    cardCode.innerHTML = chosenExampleType.code;
-    document.querySelector("#codeDiv").classList.add("mockup-code");
+    cardCode.innerHTML = hljs.highlight(chosenExampleType.code, {language:"typescript"}).value;
+   //  document.querySelector("#codeDiv").classList.add("mockup-code");
 }
+
+loadExample("basic");
