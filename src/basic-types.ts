@@ -2,17 +2,17 @@ export function basicTypesExample() {
   return {
     title: "Basic Types",
     explanation: `TypeScript adds several data types on top of JavaScript's data types:
-      - boolean
-      - number
-      - string
-      - array
-      - tuple
-      - enum
-      - any
-      - void
-      - null and undefined
-      - never
-      - object `,
+- boolean
+- number
+- string
+- array
+- tuple
+- enum
+- any
+- void
+- null and undefined
+- never
+- object `,
     code: `// Boolean
     let isDone: boolean = false; // "is assigned the value of"
 // isDone is a variable annotated with the boolean data type and assigned the value false.
@@ -31,10 +31,10 @@ export function basicTypesExample() {
 export function arrayTypesExample(){
   return {
     title: "Array Types",
-    explanation: "Typescript adds a few different types for arrays, including array, tuple, and enum.",
+    explanation: "TypeScript adds a few different types for arrays, including array, tuple, and enum.",
     code: `// Array
     let myArray: number[] = [1, 2, 3, 4, 5];
-    let myStringArray: string[] = ["What's up", "Scrub"]
+    let myStringArray: string[] = ["Hello", "What's up"]
 
 // Tuple
     let myTuple: [string, number] = ["What's up", 42]
