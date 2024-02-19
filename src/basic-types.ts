@@ -15,15 +15,15 @@ export function basicTypesExample() {
 - object `,
     code: `// Boolean
     let isDone: boolean = false; // "is assigned the value of"
-// isDone is a variable annotated with the boolean data type and assigned the value false.
+// isDone (variable) annotated w/ boolean data type, assigned the value false.
   
 // Number
     let myNumber: number = 42;
-// myNumber is a variable annotated with the number data type and assigned the value 42.
+// myNumber (variable) annotated w/ number data type, assigned the value 42.
   
 // String
     let myName: string = "Seth";
-// myName is a variable annotated with the string data type and assigned the value "Seth".
+// myName (variable) annotated w/ string data type, assigned the value "Seth".
 `,
   };
 }
@@ -31,7 +31,10 @@ export function basicTypesExample() {
 export function arrayTypesExample(){
   return {
     title: "Array Types",
-    explanation: "TypeScript adds a few different types for arrays, including array, tuple, and enum.",
+    explanation: `TypeScript adds a few different types for arrays: 
+- array
+= tuple
+- enum`,
     code: `// Array
     let myArray: number[] = [1, 2, 3, 4, 5];
     let myStringArray: string[] = ["Hello", "What's up"]
@@ -50,7 +53,10 @@ export function arrayTypesExample(){
 export function specialTypesExample() {
   return {
     title: "Special Types",
-    explanation: "TypeScript has a few data types that are atypical, including any, void, null, undefined, and never",
+    explanation: `TypeScript has a few data types that are atypical: 
+- void
+- null and undefined
+- never`,
     code: `// Any type
     let notSure: any = myCar;
 // type any can be assigned any value
@@ -74,16 +80,6 @@ export function specialTypesExample() {
 // ex: a function that always throws an error will return a 'never'`
   }
 }
-
-export function functionTypesExample() {
-    return {
-      title: "Function Types",
-      explanation: `In JavaScript, functions are objects. TypeScript allows you to annotate functions with types.
-              - parameter types
-              - return types`,
-      code: `// parameter types`,
-    }
-  }
 
 //example
 function add(x: number, y: number): number {
