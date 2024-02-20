@@ -30,24 +30,24 @@ const cardCode = document.querySelector("#cardCode");
 
 function loadExample(exampleType: string){
     // based on exampleType load appropriate example
-    let chosenExampleType;
+    let chosenExample;
     switch(exampleType) {
         case "basic":
-            chosenExampleType = basicTypesExample();
+            chosenExample = basicTypesExample();
             break;
         case "array":
-            chosenExampleType = arrayTypesExample();
+            chosenExample = arrayTypesExample();
             break;
         case "special":
-            chosenExampleType = specialTypesExample();
+            chosenExample = specialTypesExample();
             break;
         default:
-            chosenExampleType = basicTypesExample();
+            chosenExample = basicTypesExample();
     }
 
-    cardTitle.textContent = chosenExampleType.title;
-    cardExplanation.textContent = chosenExampleType.explanation;
-    cardCode.innerHTML = hljs.highlight(chosenExampleType.code, {language:"typescript"}).value;
+    cardTitle.textContent = chosenExample.title;
+    cardExplanation.textContent = chosenExample.explanation;
+    cardCode.innerHTML = hljs.highlight(chosenExample.code, {language:"typescript"}).value;
    //  document.querySelector("#codeDiv").classList.add("mockup-code");
 }
 
