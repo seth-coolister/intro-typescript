@@ -20,9 +20,9 @@ export const functionParameterTypes = () => {
         title: "Data types can be set for function parameters",
         explanation: `When writing functions in TypeScript, you can specify the types of data that the function expects as parameters.`,
         code: `
-        function add(num1: number, num2: number) {      
-        return (num1 + num2);
-        }`
+function add(num1: number, num2: number) {
+return (num1 + num2);
+}`
     }
 }
 
@@ -31,9 +31,9 @@ export const functionReturnTypes = () => {
         title: "Data types can be set for function return values",
         explanation: "When writing functions in TypeScript, you can specify the type of data that the function will return.",
         code: `
-        function add(num1: number, num2: number): number {      
-        return (num1 + num2);
-        }`
+function add(num1: number, num2: number): number {
+return (num1 + num2);
+}`
     }
 }
 
@@ -42,8 +42,8 @@ export const functionArrow = () => {
         title: 'All data typing of parameters and return values can be done in one line',
         explanation: 'Arrow functions are a shorter way to define functions in JavaScript and TypeScript',
         code: `
-        const addArrow = (num1: number, num2: number): string =>        
-        (num1 + num2).toString()`
+const addArrow = (num1: number, num2: number): string =>
+(num1 + num2).toString()`
     }
 }
 
@@ -52,14 +52,33 @@ export const optionalParameters = () => {
         title: "Function parameters can be made optional by adding a ? after the variable name",
         explanation: "If the optional age parameter is provided below, the function will return a string that includes the name and age of the user. If the optional age parameter is not provided, the function will return a string that only includes the name of the user.",
         code: `
-        function greetUser(name: string, age?: number): string {
-            if (age) {
-                return "Hello " + name + " you are " + age + " years old today."
-            }
-            else {
-                return "Hello " + " Name."
-            }
-        }`
+function greetUser(name: string, age?: number): string {
+    if (age) {
+        return "Hello " + name + " you are " + age + " years old today."
+    }
+    else {
+        return "Hello " + " Name."
+    }
+}`
+    }
+}
+
+export const callbackFunctions = () => {
+    return {
+        title: "Callback functions are functions that are passed as parameters for other functions",
+        explanation: "Callback functions are functions that are passed as arguments for other functions, they are used to execute code after a certain event has occured",
+        code: `
+function delayedResponse(callback: (message: string) => void, delay: number): void {
+    setTimeout(() => {
+        callback('This is a delayed response');
+    }, delay);
+}
+
+// usage
+delayedResponse((message) => {
+    console.log(message);
+}, 2000);
+`
     }
 }
 
@@ -74,7 +93,7 @@ prevButton.addEventListener('click', () => {
 })
 
 nextButton.addEventListener('click', () => {
-    if(indicator < 4){
+    if(indicator < 5){
         indicator++;
         loadExample(indicator);
     }
@@ -100,6 +119,9 @@ function loadExample(exampleNum: number = 1,) {
             break;
         case 4:
             chosenExample = optionalParameters();
+            break;
+        case 5:
+            chosenExample = callbackFunctions();
             break;
         default:
             chosenExample = functionArrow();

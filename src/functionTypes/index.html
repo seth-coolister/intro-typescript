@@ -11,19 +11,19 @@
     </head>
     <body>
         <h1 class="text-2xl bg-primary-content p-4 text-center text-primary">Function Types</h1>
-        <main class="flex flex-col justify-center items-center h-screen m-2">
-            <div class="flex w-full justify-center items-center border p-8">
-                <button id="prevButton" class="btn btn-circle">&lt;</button>
-                <div>
-                    <h3 id="cardTitle" class="font-bold text-primary"></h3>
-                    <p id="cardExplanation" class="text-primary"></p>
-                    <div id="codeDiv" class="bg-primary-content rounded-lg text-slate-300">
+        <main class="flex flex-col justify-center items-center h-screen m-4">
+            <div class="w-full justify-center items-center rounded-lg p-4 bg-slate-700">
+                <h3 id="cardTitle" class="font-bold text-primary"></h3>
+                <p id="cardExplanation" class="text-primary"></p>
+                <div id="carousel" class="flex justify-between items-center my-8">
+                    <button id="prevButton" class="btn btn-circle bg-primary border-none">prev</button>
+                    <div id="codeDiv" class="bg-primary-content rounded-lg px-8 mx-8 text-slate-300">
                         <pre>
                             <code id="cardCode" class="text-wrap"></code>
                         </pre>
                     </div>
+                    <button id="nextButton" class="btn btn-circle bg-primary border-none">next</button>
                 </div>
-                <button id="nextButton" class="btn btn-circle">&gt;</button>
             </div>
         </main>
     </body>

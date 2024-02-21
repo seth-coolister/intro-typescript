@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" exa>
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,25 +9,26 @@
     <script src="index.ts" defer type="module"></script>
     <title>Introduction to TypeScript</title>
   </head>
-  <body class="bg-primary flex-col h-screen overflow-hidden">
+  <body class="flex-col h-screen overflow-hidden">
     <header>
       <h1 class="text-2xl bg-primary-content p-4 text-center text-primary">Seth's TypeScript Types</h1>
     </header>
     <main class="flex h-full">
       <nav class="bg-primary-content min-w-40 p-2">
-        <ul class="flex flex-col">
-          <li><button class="btn btn-sm mx-2 w-32" id="basicTypesButton">Basic Types</button></li>
-          <li><button class="btn btn-sm m-2 w-32" id="arrayTypesButton">Array Types</button></li>
-          <li><button class="btn btn-sm mx-2 w-32" id="specialTypesButton">Special Types</button></li>
+        <ul class="flex flex-col mx-2">
+          <li><button class="btn btn-sm w-32 mb-2" id="basicTypesButton">Basic Types</button></li>
+          <li><button class="btn btn-sm w-32 mb-2" id="arrayTypesButton">Array Types</button></li>
+          <li><button class="btn btn-sm w-32 mb-2" id="specialTypesButton">Special Types</button></li>
+          <li><button class="btn btn-sm w-32 mb-2" id="specialTypesButton"><a href="functionTypes/index.html">Function Types</a></button></li>
         </ul>
       </nav>
-      <div class="p-2">
+      <div class="p-2 bg-primary">
           <h3 id="cardTitle" class="text-2xl font-bold mb-2"></h3>
         <pre><p id="cardExplanation" class="mb-2"></p></pre>
         <pre><div id="cardCode" class="bg-primary-content rounded-lg p-4 text-slate-300"></div><code id="codeDiv" class="text-wrap"></code></pre></div>
       </div>
     </main>
-    <footer class="bg-primary-content fixed bottom-0 w-full p-2 text-center">
+    <footer class="bg-primary-content fixed bottom-0 w-full p-2 text-center text-primary">
       &copy;2024 Seth Callister Designs
     </footer>
   </body>
