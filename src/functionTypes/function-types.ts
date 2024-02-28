@@ -1,5 +1,6 @@
 import hljs from "highlight.js/lib/core";
 import typescript from "highlight.js/lib/languages/typescript";
+import { ExampleCode } from "../types/ExampleCode";
 
 hljs.registerLanguage("typescript", typescript);
 
@@ -15,7 +16,7 @@ function add(num1: number, num2: number): string {
 // data type functionName = (parameters) => return;
 const addArrow = (num1: number, num2: number): string => (num1 + num2).toString();
 
-export const functionParameterTypes = () => {
+export const functionParameterTypes = (): ExampleCode => {
     return {
         title: "Data types can be set for function parameters",
         explanation: `When writing functions in TypeScript, you can specify the types of data that the function expects as parameters.`,
@@ -26,7 +27,7 @@ return (num1 + num2);
     }
 }
 
-export const functionReturnTypes = () => {
+export const functionReturnTypes = (): ExampleCode => {
     return {
         title: "Data types can be set for function return values",
         explanation: "When writing functions in TypeScript, you can specify the type of data that the function will return.",
@@ -37,7 +38,7 @@ return (num1 + num2);
     }
 }
 
-export const functionArrow = () => {
+export const functionArrow = (): ExampleCode => {
     return {
         title: 'All data typing of parameters and return values can be done in one line',
         explanation: 'Arrow functions are a shorter way to define functions in JavaScript and TypeScript',
@@ -47,7 +48,7 @@ const addArrow = (num1: number, num2: number): string =>
     }
 }
 
-export const optionalParameters = () => {
+export const optionalParameters = (): ExampleCode => {
     return {
         title: "Function parameters can be made optional by adding a ? after the variable name",
         explanation: "If the optional age parameter is provided below, the function will return a string that includes the name and age of the user. If the optional age parameter is not provided, the function will return a string that only includes the name of the user.",
@@ -63,7 +64,7 @@ function greetUser(name: string, age?: number): string {
     }
 }
 
-export const callbackFunctions = () => {
+export const callbackFunctions = (): ExampleCode => {
     return {
         title: "Callback functions are functions that are passed as parameters for other functions",
         explanation: "Callback functions are functions that are passed as arguments for other functions, they are used to execute code after a certain event has occured",
@@ -106,7 +107,7 @@ const cardCode = document.querySelector("#cardCode");
 
 function loadExample(exampleNum: number = 1,) {
     // based on example load appropriate example
-    let chosenExample;
+    let chosenExample: ExampleCode;
     switch (exampleNum) {
         case 1:
             chosenExample = functionParameterTypes();
