@@ -20,7 +20,7 @@ const buildTopNavFromJSON = (blocksArray: any) => {
     blocksArray.forEach((block: any, index: Number) => {
         //console.log(block.meta.name)
         const navItem = document.createElement('a');
-        navItem.classList.add('btn','btn-sm','w-32','m-2');
+        navItem.classList.add('btn','btn-sm','w-40','m-2','hover:bg-primary');
         navItem.href = `#${block.meta.dashedName}`;
         navItem.textContent = block.meta.name;
 
@@ -28,9 +28,9 @@ const buildTopNavFromJSON = (blocksArray: any) => {
                 // find block that matches clicked nav item
                 blocksArray.forEach((item:any) => {
                 const navItem = document.querySelector(`a[href="#${item.meta.dashedName}"]`);
-                navItem?.classList.remove('bg-primary','text-blue-900');
+                navItem?.classList.remove('border-primary','border-2','text-cyan-800');
             })
-            navItem.classList.add('bg-primary','text-blue-900');
+            navItem.classList.add('border-primary','border-2','text-cyan-800');
 
             buildLeftNavFromJSON(block);
         })
@@ -45,7 +45,7 @@ const buildLeftNavFromJSON = (block: any) => {
     block.challenges.forEach((challenge: any) => {
         const listItem = document.createElement('li');
         listItem.textContent = challenge.title;
-        listItem.classList.add('btn', 'btn-sm','w-60','my-1','text-ellipsis','overflow-hidden');
+        listItem.classList.add('btn', 'btn-sm','w-60','my-1','overflow-hidden','hover:bg-primary');
 
         listItem.addEventListener('click', () => {
             //console.log(challenge.title);
@@ -75,7 +75,7 @@ const buildSnippetDisplay = (challenge: any) => {
 
     const title = document.createElement('h2');
     title.textContent = snippet.title;
-    title.classList.add('text-2xl','font-bold','text-center','my-4')
+    title.classList.add('text-3xl','font-bold','my-4')
 
     const description = document.createElement('div');
     description.innerHTML = snippet.description;

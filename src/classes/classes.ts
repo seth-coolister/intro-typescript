@@ -1,3 +1,35 @@
+const section1 = document.querySelector('#section1');
+const section2 = document.querySelector('#section2');
+const section3 = document.querySelector('#section3');
+
+const imgContent = document.querySelector('section > img');
+
+const objOptions = {
+    root: null,
+    threshold: 0.50,
+    rootMargin: '0px'
+}
+
+const sectionObserver = new IntersectionObserver(callBackFunction, objOptions);
+
+if(section1) sectionObserver.observe(section1);
+if(section2) sectionObserver.observe(section2);
+if(section3) sectionObserver.observe(section3);
+
+function callBackFunction(entries: IntersectionObserverEntry[]){
+    entries.forEach(entry => {
+        const img = entry.target.querySelector('img');
+        const targetClass = (entry.target as HTMLElement).dataset.class;
+        if(entry.isIntersecting){
+            img.classList.remove(targetClass as string, "opacity-0");
+        } else {
+            img.classList.add(targetClass as string, "opacity-0");
+        }
+    })
+}
+
+
+
 // Abstraction
 
 /* 
