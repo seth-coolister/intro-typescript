@@ -1,12 +1,20 @@
+import { ExampleCodeSnippet } from '../lib/classes/ExampleCodeSnippet';
+
 const section1 = document.querySelector('#section1');
 const section2 = document.querySelector('#section2');
 const section3 = document.querySelector('#section3');
+const section4 = document.querySelector('#section4');
+
+const example1 = document.querySelector('#example1');
+const example2 = document.querySelector('#example2');
+const example3 = document.querySelector('#example3');
+const example4 = document.querySelector('#example4');
 
 const imgContent = document.querySelector('section > img');
 
 const objOptions = {
     root: null,
-    threshold: 0.50,
+    threshold: 0.5,
     rootMargin: '0px'
 }
 
@@ -15,19 +23,115 @@ const sectionObserver = new IntersectionObserver(callBackFunction, objOptions);
 if(section1) sectionObserver.observe(section1);
 if(section2) sectionObserver.observe(section2);
 if(section3) sectionObserver.observe(section3);
+if(section4) sectionObserver.observe(section4);
 
 function callBackFunction(entries: IntersectionObserverEntry[]){
     entries.forEach(entry => {
-        const img = entry.target.querySelector('img');
+        // const img = entry.target.querySelector('img');
+        const div = entry.target.querySelector('div');
         const targetClass = (entry.target as HTMLElement).dataset.class;
         if(entry.isIntersecting){
-            img.classList.remove(targetClass as string, "opacity-0");
+            div.classList.remove(targetClass as string, "opacity-0");
         } else {
-            img.classList.add(targetClass as string, "opacity-0");
+            div.classList.add(targetClass as string, "opacity-0");
         }
     })
 }
 
+
+
+const classExmaple = new ExampleCodeSnippet(
+    'Class Example',
+    `A class is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or properties), and implementations of behavior (member functions or methods).`,
+    `class Person {
+        name: string;
+        age: number;
+        constructor(name: string, age: number) {
+            this.name = name;
+            this.age = age;
+        }
+        greet() {
+            console.log(\`Hello, my name is \${this.name} and I am \${this.age} years old.\`);
+        }
+    }`
+
+)
+
+const abstractClassExample = new ExampleCodeSnippet(
+    'Abstract Class Example',
+    `Abstract classes are base classes from which other classes may be derived. They may not be instantiated directly. Unlike an interface, an abstract class may contain implementation details for its members.`,
+    `
+    abstract class Shape { 
+        protected color: string; 
+        abstract getArea(): number; 
+        abstract getPerimeter(): number; 
+        getColor(): string { return this.color; }
+    }`
+)
+
+// add abstract class example
+if (example1) example1.innerHTML = abstractClassExample.renderCodeSnippet();
+
+const inheritanceExample = new ExampleCodeSnippet(
+    'Inheritance Example',
+    `Inheritance is a mechanism in which one calss acquires the property of another class. It helps to reuse, extend, and modify the code.`,
+`
+class Circle extends Shape {
+    private radius: number;
+    constructor(color: string, radius: number) {
+        super();
+        this.color = color;
+        this.radius = radius
+    }
+    getArea(): number { return Math.PI * this.radius ** 2; }
+    getPerimeter(): number { return 2 * Math.PI * this.radius; }
+}`
+)
+
+// add inheritance example
+if (example2) example2.innerHTML = inheritanceExample.renderCodeSnippet();
+
+const polymorphismExample = new ExampleCodeSnippet(
+    'Polymorphism Example',
+    `Polymorphism is an object-oriented programming concept that refers to the ability of a variable, function, or object to take on multiple forms.`,
+`
+class Rectangle extends Shape {
+    private width: number;
+    private height: number;
+    constructor(color: string, width: number, height: number) {
+        super();
+        this.color = color;
+        this.width = width;
+        this.height = height;
+    }
+    getArea(): number { return this.width * this.height; }
+    getPerimeter(): number { return 2 * (this.width + this.height); }
+}`
+)
+
+// add polymorphism example
+if (example3) example3.innerHTML = polymorphismExample.renderCodeSnippet();
+
+const encapsulationExample = new ExampleCodeSnippet(
+    'Encapsulation Example',
+    `Encapsulation is the bundling of data with the methods that operate on that data, or the restricting of direct access to some of an object's components.`,
+`
+class Person {
+    private name: string;
+    private age: number;
+    occupation: string;
+    constructor(name: string, age: number, occupation: string) {
+        this.name = name;
+        this.age = age;
+        this.occupation = occupation;
+    }
+    getName(): string { return this.name; }
+    greet() { console.log(\`Hello, my name is \${this.name} and I am \${this.age} years old. I work as a \${this.occupation}.\`); }
+}`
+)
+
+// add encapsulation example
+if (example4) example4.innerHTML = encapsulationExample.renderCodeSnippet();
 
 
 // Abstraction
