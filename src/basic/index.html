@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Stylesheet from highlightjs.org tokyo night dark-->
+    <link rel="stylesheet" href="../styles/tokyo-night-dark.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <script src="index.ts" defer type="module"></script>
+    <title>Basic Typescript Types</title>
+  </head>
+  
+  <body class="flex-col h-screen overflow-hidden bg-primary-content">
+
+    <header class="py-2 bg-primary-content">
+
+      <h1 class="text-2xl py-2 text-center text-primary"><a href="../index.html">Seth's TypeScript Types</a></h1>
+
+      <nav>
+        <ul class="py-4 flex justify-center">
+          <li><a href="#" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Basic Types</a></li>
+          <li><a href="../functionTypes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Function Types</a></li>
+          <li><a href="../interfaces/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Interfaces</a></li>
+          <li><a href="../classes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Classes</a></li>
+          <li><a href="../generics/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Generics</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main class="flex min-h-full bg-slate-800 text-slate-300">
+      <div class="bg-primary-content px-4 py-8">
+        <ul class="flex flex-col mx-2">
+          <li><button class="btn btn-sm w-48 mb-2 border-4 hover:border-primary hover:bg-white" id="basicTypesButton">Basic Types</button></li>
+          <li><button class="btn btn-sm w-48 mb-2 border-4 hover:border-primary hover:bg-white" id="arrayTypesButton">Array Types</button></li>
+          <li><button class="btn btn-sm w-48 mb-2 border-4 hover:border-primary hover:bg-white" id="specialTypesButton">Special Types</button></li>
+        </ul>
+      </div>
+
+      <div class="px-8 py-6 w-full">
+          <h3 id="cardTitle" class="text-2xl font-bold mb-2 text-primary"></h3>
+        <pre><p id="cardExplanation" class="mb-2"></p></pre>
+        <pre><div id="cardCode" class="bg-slate-700 rounded-lg mt-2 p-8"></div><code id="codeDiv" class="text-wrap"></code></pre></div>
+      </div>
+
+    </main>
+
+    <footer class="bg-primary-content fixed bottom-0 w-full p-2 text-center text-primary">
+      &copy;2024 Seth Callister Designs
+    </footer>
+    
+  </body>
+</html>

@@ -9,20 +9,35 @@
     <title>Interface Examples</title>
   </head>
   <body>
-    <header>
-      <div class="navbar flex justify-center bg-primary-content pl-64"></div>
-    </header>
-    <main class="flex">
-      <nav class="min-w-72 bg-primary-content px-6">
-        <ul id="navList" class="flex flex-col"></ul>
+
+    <header class="py-2 bg-primary-content">
+
+      <h1 class="text-2xl py-2 text-center text-primary"><a href="../index.html">Seth's TypeScript Types</a></h1>
+
+      <nav>
+        <ul class="py-4 flex justify-center">
+          <li><a href="../basic/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Basic Types</a></li>
+          <li><a href="../functionTypes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Function Types</a></li>
+          <li><a href="#" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Interfaces</a></li>
+          <li><a href="../classes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Classes</a></li>
+          <li><a href="../generics/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Generics</a></li>
+        </ul>
       </nav>
-      <section
-        id="snippetDisplay"
-        class="flex flex-col py-2 px-4 gap-4 bg-primary w-full min-h-screen h-100%"
-      >
+
+    </header>
+
+    <main class="flex">
+
+      <div class="min-w-72 bg-primary-content px-6">
+        <ul id="navList" class="flex flex-col"></ul>
+      </div>
+
+      <section id="snippetDisplay" class="flex flex-col py-2 px-4 gap-4 bg-slate-800 text-slate-200 w-full min-h-screen h-100%">
         <!-- elements inserted in typescript -->
       </section>
+
     </main>
+
     <footer class="bg-primary-content w-full p-2 text-center text-primary">
       &copy;2024 Seth Callister Designs
     </footer>

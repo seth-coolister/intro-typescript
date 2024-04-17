@@ -6,8 +6,8 @@
         <!-- Stylesheet from highlightjs.org tokyo night dark-->
         <link rel="stylesheet" href="../styles/tokyo-night-dark.css"/>
         <link rel="stylesheet" href="../index.css"/>
-        <script src="function-types.ts" defer type="module"></script>
-        <title>Function Types</title>
+        <script src="generics.ts" defer type="module"></script>
+        <title>TS Generics</title>
     </head>
 
     <body class="h-screen flex flex-col">
@@ -20,28 +20,23 @@
                 <li><a href="../basic/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Basic Types</a></li>
                 <li><a href="../functionTypes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Function Types</a></li>
                 <li><a href="../interfaces/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Interfaces</a></li>
-                <li><a href="#" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Classes</a></li>
-                <li><a href="../generics/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Generics</a></li>
+                <li><a href="../classes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Classes</a></li>
+                <li><a href="#" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Generics</a></li>
               </ul>
             </nav>
-      
+
         </header>
-        
-        <main class="flex flex-col items-center justify-center bg-slate-800 text-slate-300 flex-grow flex-shrink">
-            <div class="justify-center items-center rounded-lg p-8 max-w-screen-md bg-slate-700">
-                <h3 id="cardTitle" class="font-bold text-primary"></h3>
-                <p id="cardExplanation"></p>
-                <div id="carousel" class="flex justify-between items-center my-8">
-                    <button id="prevButton" class="btn btn-circle bg-primary border-none">prev</button>
-                    <div id="codeDiv" class="bg-primary-content rounded-lg px-8 mx-8">
-                        <pre>
-                            <code id="cardCode" class="text-wrap"></code>
-                        </pre>
-                    </div>
-                    <button id="nextButton" class="btn btn-circle bg-primary border-none">next</button>
-                </div>
-            </div>
+
+        <main class="flex flex-col items-center justify-between bg-slate-800 flex-grow flex-shrink overflow-y-auto">
+
+            <!--top cards-->
+            <div id="detail-view" class="flex flex-col h-2/3 items-center justify-center mb-auto"></div>
+
+            <!--bottom cards-->
+            <div id="list-view" class="grid grid-cols-4 mx-1 h-1/3 overflow-x-auto hover:shadow-2xl"></div>
+            
         </main>
+
 
         <footer class="bg-primary-content w-full p-2 text-center text-primary">
             &copy;2024 Seth Callister Designs

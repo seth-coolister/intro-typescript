@@ -45,7 +45,7 @@ const buildLeftNavFromJSON = (block: any) => {
     block.challenges.forEach((challenge: any) => {
         const listItem = document.createElement('li');
         listItem.textContent = challenge.title;
-        listItem.classList.add('btn', 'btn-sm','w-60','my-1','overflow-hidden','hover:bg-primary');
+        listItem.classList.add('btn','btn-sm','w-60','my-1','border-2','hover:border-primary','hover:bg-white');
 
         listItem.addEventListener('click', () => {
             //console.log(challenge.title);
@@ -83,7 +83,7 @@ const buildSnippetDisplay = (challenge: any) => {
 
     const instructions = document.createElement('div');
     instructions.innerHTML = snippet.instructions;
-    instructions.classList.add('bg-primary-content','p-4','rounded-2xl','text-secondary','my-4');
+    instructions.classList.add('bg-primary-content','p-4','rounded-2xl','text-primary','my-4');
 
     const snippetSolution = document.createElement('div');
     snippetSolution.innerHTML = snippet.solution;
@@ -98,7 +98,8 @@ buildTopNavFromJSON(blocksArray);
 
 buildLeftNavFromJSON(basicCss);
 
-
+let firstChallenge = basicCss.challenges[0];
+buildSnippetDisplay(firstChallenge);
 
 
 

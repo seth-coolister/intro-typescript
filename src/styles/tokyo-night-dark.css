@@ -17,7 +17,7 @@ code.hljs {
 /*  Comment */
 .hljs-meta,
 .hljs-comment {
-  color: #565f89
+  color: rgb(203 213 225)
 }
 /* Red */
 /*INFO: This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red */
