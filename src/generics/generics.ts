@@ -167,6 +167,18 @@ renderExample(exampleTwo)
 renderExample(exampleThree)
 renderExample(exampleFour)
 
+window.onload = () => {
+  detailViewExample.classList.add(
+    'text-md',
+    'w-full',
+    'p-4',
+    'rounded-xl',
+    'bg-primary-content'
+  )
+  detailViewExample.innerHTML = exampleOne.renderCodeSnippet()
+
+}
+
 /* Generics in TypeScript are a tool that allows you to create reusable code components that can work over a variety of types rather than a single one. This allows users to consume these components and use their own types.
 
 Here's a simple example of a generic function in TypeScript:

@@ -3,32 +3,47 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="This is a collection of description about"/>
     <!-- Stylesheet from highlightjs.org tokyo night dark-->
     <link rel="stylesheet" href="styles/tokyo-night-dark.css"/>
     <link rel="stylesheet" href="index.css"/>
-    <title>Seth's TypeScript Types</title>
+    <title>Seth's TypeScript Site</title>
   </head>
 
   <body class="flex-col h-screen overflow-hidden">
 
     <header class="py-2 bg-primary-content">
 
-      <h1 class="text-2xl py-2 text-center text-primary"><a href="../index.html">Seth's TypeScript Types</a></h1>
+      <h1 class="text-2xl py-2 text-center text-primary"><a href="../index.html">Seth's TypeScript Site</a></h1>
 
       <nav>
         <ul class="py-4 flex justify-center">
-          <li><a href="basic/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Basic Types</a></li>
-          <li><a href="/functionTypes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Function Types</a></li>
-          <li><a href="/interfaces/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Interfaces</a></li>
-          <li><a href="/classes/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Classes</a></li>
-          <li><a href="/generics/index.html" class="btn btn-sm w-32 mx-2 border-4 hover:border-primary hover:bg-white">Generics</a></li>
+          <li><a href="index.html" class="btn btn-sm w-32 mx-2 border-2 border-primary hover:border-white hover:bg-primary">Home</a></li>
+          <li><a href="/basic/index.html" class="btn btn-sm w-32 mx-2 border-2 hover:border-white hover:bg-primary">Basic Types</a></li>
+          <li><a href="/functionTypes/index.html" class="btn btn-sm w-32 mx-2 border-2 hover:border-white hover:bg-primary">Function Types</a></li>
+          <li><a href="/interfaces/index.html" class="btn btn-sm w-32 mx-2 border-2 hover:border-white hover:bg-primary">Interfaces</a></li>
+          <li><a href="/classes/index.html" class="btn btn-sm w-32 mx-2 border-2 hover:border-white hover:bg-primary">Classes</a></li>
+          <li><a href="/generics/index.html" class="btn btn-sm w-32 mx-2 border-2 hover:border-white hover:bg-primary">Generics</a></li>
         </ul>
       </nav>
 
     </header>
 
-    <main class="flex h-full bg-slate-800">
+    <main class="flex items-center justify-center bg-[url('images/city.webp')] h-full">
       
+      <div class="card mx-auto p-6 text-white border-2 bg-slate-700 bg-opacity-80 shadow-xl">
+        <h2 class="text-2xl text-primary">Welcome to Seth's TypeScript Site</h2>
+        <p class="py-2">This site is a collection of TypeScript examples and tutorials.</p>
+        <p class="py-2">The site is organized into the following sections:</p>
+        <ul class="list-disc pl-4">
+          <li>Basic Types</li>
+          <li>Function Types</li>
+          <li>Interfaces</li>
+          <li>Classes</li>
+          <li>Generics</li>
+        </ul>
+      </div>
+
     </main>
 
     <footer class="bg-primary-content fixed bottom-0 w-full p-2 text-center text-primary">
