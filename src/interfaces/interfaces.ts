@@ -20,7 +20,7 @@ const buildTopNavFromJSON = (blocksArray: any) => {
     blocksArray.forEach((block: any, index: Number) => {
         //console.log(block.meta.name)
         const navItem = document.createElement('a');
-        navItem.classList.add('btn','btn-sm','w-40','m-2','hover:bg-primary');
+        navItem.classList.add('btn','btn-sm','w-40','m-2','border-2','hover:bg-primary');
         navItem.href = `#${block.meta.dashedName}`;
         navItem.textContent = block.meta.name;
 
@@ -28,9 +28,9 @@ const buildTopNavFromJSON = (blocksArray: any) => {
                 // find block that matches clicked nav item
                 blocksArray.forEach((item:any) => {
                 const navItem = document.querySelector(`a[href="#${item.meta.dashedName}"]`);
-                navItem?.classList.remove('border-primary','border-2','text-cyan-800');
+                navItem?.classList.remove('border-primary');
             })
-            navItem.classList.add('border-primary','border-2','text-cyan-800');
+            navItem.classList.add('border-primary');
 
             buildLeftNavFromJSON(block);
         })
